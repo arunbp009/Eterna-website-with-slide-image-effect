@@ -1,0 +1,840 @@
+*,p
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.597);
+}
+
+body
+{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: #428bca; */
+}
+
+/* First Header CSS start */
+
+.main-header
+{
+    position: relative;
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.126);
+    background-color: #545454;
+}
+
+.main-header .child-header
+{
+    display: flex;
+    margin-right: 10px;
+    margin-left: 80px;
+}
+
+.main-header .child-header i
+{
+    color: #e96b56;
+    font-size: 15px;
+    padding-left: 25px;
+}
+
+.main-header .child-header p
+{
+     font-size: 14px;
+     letter-spacing: 0.5px;
+     color: white;
+}
+
+.main-header .main-icon
+{
+    position: absolute;
+    right: 110px;
+}
+.main-header .main-icon a i
+{
+    font-size: 16px;
+    padding-right: 10px;
+    color: white;
+}
+
+.main-header .main-icon a i:hover
+{
+    color:blue;
+}
+
+/* First Header CSS end */
+
+/* Navigation CSS start */
+
+nav
+{
+    position: sticky;
+    top: 0;
+   padding: 23px;
+   display: flex;
+   z-index: 100;
+   background-color: white;
+   width: 100%;
+   z-index: 1000;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.186);
+}
+
+nav .nav1
+{
+    margin-left: 95px;
+    border-left: 9px solid #e96b56;
+    height: 26px;
+    
+}
+
+nav .nav1 h1
+{
+    font-size: 26px;
+    padding-left: 5px;
+}
+
+nav .nav1 h1 a
+{
+     text-decoration: none;
+}
+
+nav .nav2
+{
+    position: absolute;
+    right: 70px;
+   margin: 5px;
+}
+nav .nav2 ul
+{
+    display: flex;
+}
+
+nav .nav2 ul li
+{
+   list-style-type: none;
+}
+
+nav .nav2 ul li a
+{
+      padding-right: 35px;
+      text-decoration: none;
+      font-size: 16px;
+}
+
+nav .nav2 ul li .anchor-nav
+{
+    padding-right: 35px;
+    text-decoration: none;
+    color: #e96b56;
+    transition: 0.5s;
+}
+
+nav .nav2 ul li a:hover
+{
+    color: #e96b56;
+}
+
+/* Navigation CSS end */
+
+/* Background Image CSS Start */
+
+.container
+{
+   width: 100%;
+   height: auto;
+}
+
+.container .slider-container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 100%;
+   margin: auto;
+   height: 500px;
+   overflow: hidden;
+}
+
+.container .slider-container .slider
+{
+   display: none;
+   animation-name: fade;
+   animation-duration: 1.5s;
+}
+@keyframes fade
+{
+   from{
+       opacity: 0.5;
+   }
+   to{
+       opacity: 1;
+   }
+}
+
+/* for-responsive */
+
+@media (max-width:700px)
+{
+   h1
+   {
+       font-size: 20px;
+   }
+   .prev-button, .next-button
+   {
+       font-size: 20px;
+   }
+   .line
+   {
+       padding: 1px 8px;
+   }
+}
+
+.container .slider-container .slider a img
+{
+    width: 100%;
+    height: 100%;
+   vertical-align: middle;
+}
+
+.container .slider-container .slider .slider-content
+{
+    position: absolute;
+    top: 160px;bottom: 0;left: 0;right: 0;
+    text-align: center;
+}
+
+.slider-content h1
+{
+    font-size: 40px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.slider-content h1 strong
+{
+    color: #e96b56;
+    letter-spacing: 0.5px;
+}
+
+.slider-content p
+{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 23px;
+    margin-bottom: 25px;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.slider-content button
+{
+   padding: 11px 30px;
+   border: 1px solid #e96b56;
+   background-color: #e96b56;
+   color: white;
+   font-size: 14px;
+   border-radius: 20px;
+}
+
+.slider-content button:hover
+{
+    background-color: #e96c56ee; 
+}
+.container .slider-container .prev-button,.next-button
+{
+    position: absolute;
+    padding: 10px;
+    width: 40px;
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.container .slider-container .prev-button:hover,.next-button:hover
+{
+    color: #e96b56;
+}
+
+
+.container .slider-container .prev-button
+{
+   left: 0;
+}
+
+.container .slider-container .next-button
+{
+    right: 0;
+}
+
+.slider-container .lines
+{
+    position: absolute;
+    display: flex;
+    bottom: 25px;
+}
+
+.slider-container .lines .line
+{
+  padding: 2px 10px;
+  /* border: 1px solid red; */
+  background-color: blue;
+  margin: 0px 5px;
+  transition: all 0.5s ease ;
+  cursor: pointer;
+}
+
+.active,
+.slider-container .lines .line:hover
+{
+    background-color:blue;
+}
+
+
+/* Background Image CSS End */
+
+/* Second Page CSS start */
+
+.main-card
+{
+    display: flex;
+    padding: 50px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-card .card
+{
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.222);
+    border-radius: 8px;
+    margin: 5px;
+    width: 420px;
+    height: 240px;
+    padding-top: 13px;
+    padding-bottom: 30px;
+    margin-left: 17px;
+    transition: all 0.5s;
+}
+
+.main-card .card:hover
+{
+   background-color: #e96b56;
+   transform: scale(1.05);
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.222);
+}
+
+.main-card .card i
+{
+    color: #e96b56;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-left: 25px;
+    transition: all 0.5s;
+}
+
+.main-card .card:hover i
+{
+    color: white;
+}
+
+.main-card .card h2
+{
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    transition: all 0.5s;
+}
+
+.main-card .card:hover h2
+{
+    color: white;
+}
+
+.main-card .card p
+{
+   font-size: 16px;
+   letter-spacing: 0.5px;
+   line-height: 21px;
+   margin-left: 25px;
+   transition: all 0.5s;
+}
+
+.main-card .card:hover p
+{
+    color: white;
+}
+
+/* Second Page CSS end */
+
+/* About CSS start */
+
+.main-about
+{
+    display: flex;
+    margin: 30px 110px;
+}
+
+.main-about .about-img
+{
+    width: 50%;
+    margin-right: 14px;
+
+}
+
+.main-about .about-img img
+{
+    width: 100%;
+}
+
+.main-about .about-body
+{
+    width: 50%;
+    margin-left: 14px;
+}
+
+.main-about h1
+{
+   font-size: 25px;
+   letter-spacing: 0.5px;
+   margin-bottom: 10px;
+}
+
+.main-about p
+{
+    font-size: 16px;
+   letter-spacing: 0.5px;
+   margin-bottom: 20px;
+   line-height: 25px;
+}
+
+.main-about p i
+{
+   font-size: 19px;
+   color: #e96b56;
+   margin-right: 5px;
+}
+
+.main-about p span
+{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+ }
+
+
+/* About CSS End */
+
+/* Service CSS start */
+
+.main-service
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.main-service .service-card
+{
+    border: 1px solid rgba(0, 0, 0, 0.112);
+    margin: 5px;
+    width: 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 30px 0px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 55px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.136);
+    transition: all 0.5s;
+}
+
+.main-service .service-card:hover
+{
+    background-color: #e96b56;
+    transform: scale(1.03);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.136);
+}
+
+.main-service .service-card .service-card-head
+{
+    position: relative;
+    margin-top: 40px;
+    padding-right: 60px;
+}
+
+.service-card-head .empty-div
+{
+    position: absolute;
+    border: 1px solid transparent;
+    background-color: #e96c5649;
+    padding: 33px;
+    border-radius: 6px;
+    right: 1px;
+    bottom: -60px;
+}
+
+.service-card-head .empty-div1
+{
+    position: absolute;
+    border: 1px solid transparent;
+    background-color: #e96c5649;
+    padding: 31px;
+    border-radius: 6px;
+    right: 5px;
+    bottom: -57px;
+}
+
+.service-card-head .empty-div3
+{
+    position: absolute;
+    border: 1px solid transparent;
+    background-color: #e96c5649;
+    padding: 34px;
+    border-radius: 6px;
+    right: -2px;
+    bottom: -63px;
+}
+
+.service-card-head .service-icon
+{
+    position: absolute;
+    top: 0;
+    border: 1px solid #e96b56;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #e96b56;
+    z-index: 700;
+}
+
+.service-card:hover .service-card-head .service-icon
+{
+    background-color: white;
+    border: 1px solid transparent;
+}
+
+.service-card-head .service-icon i
+{
+    font-size: 25px;
+    color: white;
+}
+
+.service-card:hover .service-card-head .service-icon i
+{
+    color: #e96b56;
+}
+
+.main-service .service-card .service-card-content
+{
+    margin-top: 90px;
+    text-align: center;
+}
+
+.main-service .service-card .service-card-content h1
+{
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.main-service .service-card:hover .service-card-content h1
+{
+    color: white;
+}
+
+.main-service .service-card .service-card-content p
+{
+     font-size: 15px;
+     letter-spacing: 0.5px;
+     margin: 20px;
+} 
+
+.main-service .service-card:hover .service-card-content p
+{
+    color: white;
+}
+
+/* Service CSS end */
+
+/* news CSS start */
+
+.main-news
+{
+    position: relative;
+    background-color: #404040;
+    display: flex;
+    padding: 50px 0px;
+}
+
+.news-content
+{
+    margin: 5px;
+    margin-left: 110px;
+ }
+
+.main-news .news-content h3
+{
+     font-size: 22px;
+     letter-spacing: 0.5px;
+     margin-bottom: 20px;
+     color: white;
+}
+
+.main-news .news-content p
+{
+   font-size: 14px;
+   letter-spacing: 0.5px;
+   color: white;
+}
+
+.main-news .news-form
+{
+    position: absolute;
+    right: 100px;
+   border: 1px solid #404040;
+   border-radius: 28px;
+   margin: 5px;
+   padding: 4px 5px;
+   background-color: white;
+}
+
+.main-news .news-form form input
+{
+     width: 470px;
+     padding: 10px;
+     border-radius: 5px;
+     border: 1px solid white;
+     outline: none;
+}
+
+.main-news .news-form form button 
+{
+     padding: 10px 25px;
+     border: 1px solid #e96b56;
+     background-color: #e96b56;
+     color: white;
+     font-size: 16px;
+     margin-left: 10px;
+     border-radius: 20px;
+     transition: all 0.5s;
+}
+
+.main-news .news-form form button:hover
+{
+    border: 1px solid transparent;
+    background-color: #e96c56b8;
+} 
+
+/* news CSS end */
+
+ /* Newsletter CSS start */
+
+ .main-footer
+ {
+    padding: 50px 0px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b3b3b;
+ }
+
+ .main-footer .footer1
+ {
+    margin-right: 90px;
+    margin-bottom: 40px;
+ }
+
+ .main-footer .footer1 .foot-content
+ {
+    margin: 5px;
+ }
+
+ .main-footer .footer1 .foot-content h2
+ {
+       margin: 25px 0px;
+       color: white;
+       font-size: 16px;
+ }
+
+ .main-footer  p
+ {
+    font-size: 14px;
+    margin-bottom: 7px;
+    color: white;
+ }
+
+ .main-footer  p.ap
+ {
+    font-size: 14px;
+    margin-bottom: 7px;
+    color: white;
+    line-height: 27px;
+ }
+
+ .main-footer  p.fp
+ {
+     margin-bottom: 30px;
+     font-size: 14px;
+     color: white;
+ }
+
+ .main-footer .footer1 .foot-content p strong
+ {
+    color: white;
+ }
+
+ .main-footer .footer2
+ {
+    margin-right: 110px;
+ }
+
+ .main-footer h3
+ {
+     font-size: 16px;
+     margin-bottom: 17px;
+     margin-top: 30px;
+     color: white;
+ }
+
+ .main-footer h2
+ {
+    font-size: 19px;
+     margin-bottom: 17px;
+     margin-top: 30px;
+     color: white;
+ }
+
+ .main-footer .footer2 ul li
+ {
+     list-style-type:none;
+     margin-bottom: 17px;
+     cursor: pointer;
+     font-size: 14px;
+     color: white;
+     transition: all 0.5s;
+ }
+
+ .main-footer .footer2 ul li:hover
+ {
+     color: #e96b56;
+ }
+
+ .main-footer .footer2 ul li i
+ {
+     font-size: 10px;
+     margin-right: 7px;
+     color: #e96b56;
+ }
+
+ .main-footer .footer3 
+ {
+    margin-left: 40px;
+    width: 350px;
+    margin-top: -40px;
+ }
+
+  .main-footer .footer3 .foot-icons
+ {
+    margin: 5px;
+    margin-top: 30px;
+ }
+
+ .main-footer .footer3 .foot-icons a
+ {
+    border: 1px solid #545454;
+    padding: 7px 8px;
+    margin-right: 9px;
+    border-radius: 50%;
+    margin-top: 10px;
+    background-color:#545454;
+    transition: all 0.5s;
+ }
+
+ .main-footer .footer3 .foot-icons a:hover
+ {
+     background-color: #e96b56;
+     border: 1px solid #e96b56 ;
+ }
+
+ .main-footer .footer3 .foot-icons a i
+ {
+    font-size: 18px;
+    color: white;
+ }
+
+ /* Newsletter CSS End */
+
+  /* copyright css start */
+
+.copyright
+{
+    background-color: #404040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5px;
+}
+
+.copyright .copy
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.copyright .copy p
+{
+   font-size: 14px;
+   letter-spacing: 0.5px;
+   line-height: 25px;
+   color: white;
+}
+.copyright .copy p b
+{
+   font-size: 14px;
+   color: white;
+}
+
+.copyright .copy p a
+{
+    text-decoration: none;
+    font-size: 14px;
+    color: #e96b56;
+}
+
+/* copyright css end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
